@@ -52,9 +52,9 @@ use Illuminate\Support\Facades\Route;
 //update - update a data
 //destroy - delete a data
 
-Route::get('/', [StudentController::class, 'index']);
+Route::get('/', [StudentController::class, 'index'])->middleware('auth');
 
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login/process', [UserController::class, 'process']);
 
 Route::get('/register', [UserController::class, 'register']);
