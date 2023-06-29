@@ -7,11 +7,14 @@
     <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2x1">
         <section>
             <h3 class="font-bold text-2x1">Welcome to Student System</h3>
-            <p class="text-gray-600 pt-2">Sign in to your account</p>
+            <p class="text-gray-600 pt-2">Sign up a new account <a href="/register" class="text-purple-300 font bold">here</a> </p>
         </section>
         <section class="mt-10">
             <form action="/login/process" method="POST" class="flex flex-col">
                 @csrf
+                @error('email')
+                        <p class="text-red-500 text-xs p-1">{{$message}}</p>
+                @enderror
                 <div class="mb-6 pt-3 rounded bg-gray-200">
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2 ml-3">
                         Email

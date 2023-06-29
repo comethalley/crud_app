@@ -2,7 +2,6 @@
 @include('partials.header')
 <?php $array = array('title' => 'Student System')?>
     <x-nav :data="$array"/>
-    <x-messages />
     <header class="max-w-lg mx-auto mt-10">
         <a href="#">
             <h1 class="text-4xl font-bold text-white text-center">Students List</h1>
