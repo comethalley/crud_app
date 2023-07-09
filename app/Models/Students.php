@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Students extends Model
 {
+
+    //protected $fillable = ['first_name', 'last_name' , 'age' , 'email']; pag specific
+
+    protected $guarded = [];
+
     use HasFactory;
 }
