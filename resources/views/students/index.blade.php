@@ -14,22 +14,27 @@
                     <tr>
                         <th scope="col" class="py-3 px-6">First name</th>
                         <th scope="col" class="py-3 px-6">Last name</th>
-                        <th scope="col" class="py-3 px-6">email</th>
-                        <th scope="col" class="py-3 px-6">age</th>
+                        <th scope="col" class="py-3 px-6">Email</th>
+                        <th scope="col" class="py-3 px-6">Age</th>
+                        <th scope="col" class="py-3 px-6"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($students as $students)
-                    <tr class="bg-gray-800 border-b-2 text-white">
-                        <td class="py-4 px-6">{{ $students->first_name}}</td>
-                        <td class="py-4 px-6">{{ $students->last_name}}</td>
-                        <td class="py-4 px-6">{{ $students->email}}</td>
-                        <td class="py-4 px-6">{{ $students->age}}</td>
-
-                    </tr>
+                    @foreach ($students as $student)
+                        <tr class="bg-gray-800 border-b-2 text-white">
+                            <td class="py-4 px-6">{{ $student->first_name }}</td>
+                            <td class="py-4 px-6">{{ $student->last_name }}</td>
+                            <td class="py-4 px-6">{{ $student->email }}</td>
+                            <td class="py-4 px-6">{{ $student->age }}</td>
+                            <td class="py-4 px-6"><a href="/student/{{ $student->id }}" class="bg-sky-600 text-white px-4 py-2 py-1 rounded">view</a></td>
+                        </tr>
                     @endforeach 
                 </tbody>
-            </table>
+                </table>
+                <div class="mx-auto max-w-lg pt-6 p-4">
+
+                </div>
+            
         </div>
 
     </section>

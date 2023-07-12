@@ -63,3 +63,8 @@ Route::post('/store', [UserController::class, 'store']);
 
 Route::get('/add/student', [StudentController::class, 'create']);
 Route::post('/add/student', [StudentController::class, 'store']);
+
+Route::get('/student/{id}', [StudentController::class, 'show']);
+
+Route::put('/student/{student}', [StudentController::class, 'update']);
+Route::delete('/student/{student}', [StudentController::class, 'destroy']);
